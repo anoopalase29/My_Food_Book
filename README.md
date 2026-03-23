@@ -1,7 +1,7 @@
 🍽️ MyFoodbook (Recipe Finder App)
 📌 Project Description
 
-PantryPal is a simple web application that helps users discover recipes easily. Users can browse and view different recipes along with their ingredients and instructions. This project is built using basic web technologies and is designed for learning how to work with APIs.
+MyFoodbook is a simple web application that helps users discover recipes easily. Users can browse and view different recipes along with their ingredients and instructions. This project is built using basic web technologies and is designed for learning how to work with APIs.
 
 🎯 Purpose
 
