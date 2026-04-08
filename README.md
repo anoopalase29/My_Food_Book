@@ -12,9 +12,9 @@ Understand how to fetch and display data dynamically
 Build a clean and responsive user interface using HTML and CSS
 🌐 API Used
 
-This project uses the DummyJSON Recipes API:
+This project uses the TheMealDB API:
 
-👉 https://dummyjson.com/recipes
+👉 https://www.themealdb.com/api.php
 
 The API provides:
 

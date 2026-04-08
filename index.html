@@ -1,14 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>MyFoodbook Pro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <div id="loader">Loading recipes...</div>
-    <div id="recipes"></div>
+    <header class="header">
+        <div class="logo">
+            <i class="fa-solid fa-utensils"></i>
+            <h1>MyFoodbook</h1>
+        </div>
+        <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">
+            <i class="fa-solid fa-moon"></i>
+        </button>
+    </header>
+
+    <main class="container">
+        <section class="controls glass-panel">
+            <div class="control-group search-group">
+                <i class="fa-solid fa-search control-icon"></i>
+                <input type="text" id="search-input" placeholder="Search for recipes..." autocomplete="off">
+            </div>
+            <div class="control-group filter-group">
+                <i class="fa-solid fa-filter control-icon"></i>
+                <select id="category-filter">
+                    <option value="All">All Categories</option>
+                    <option value="Beef">Beef</option>
+                    <option value="Chicken">Chicken</option>
+                    <option value="Dessert">Dessert</option>
+                    <option value="Seafood">Seafood</option>
+                    <option value="Vegetarian">Vegetarian</option>
+                </select>
+            </div>
+            <div class="control-group sort-group">
+                <i class="fa-solid fa-sort control-icon"></i>
+                <select id="sort-select">
+                    <option value="default">Sort Options</option>
+                    <option value="az">Sort A-Z</option>
+                    <option value="za">Sort Z-A</option>
+                </select>
+            </div>
+        </section>
+
+        <section class="recipes-section">
+            <div id="loader" class="loader">
+                <div class="spinner"></div>
+                <p>Curating recipes...</p>
+            </div>
+            <div id="no-results" class="hidden">
+                <i class="fa-solid fa-cookie-bite"></i>
+                <p>No delicious recipes found! Try tweaking your search.</p>
+            </div>
+            <div id="recipes" class="recipes-grid"></div>
+        </section>
+    </main>
+
+    <!-- Modal for Recipe Details -->
+    <div id="recipe-modal" class="modal hidden">
+        <div class="modal-content glass-panel">
+            <button class="close-btn" id="close-modal"><i class="fa-solid fa-xmark"></i></button>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
